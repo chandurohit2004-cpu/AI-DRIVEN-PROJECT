@@ -63,4 +63,4 @@ Real-time Processing: Seamlessly handles and processes 1,000+ student records.
 Predictive Analytics: Automated Machine Learning pipeline predicts at-risk students and estimates grades based on attendance, internal marks, and external marks.
 Data Engineering: Uses Apache Spark to create a highly optimized "Gold Layer" Parquet generation for fast analytics querying.
 Live Monitoring: Live Grafana dashboard synchronization for system and structural health metrics.
-Dynamic Dashboard: A rich, responsive UI providing insights on department averages, individual grade distributions, and automated burnout detection.
+Dynamic Dashboard: A rich, responsive UI providing insights on department averages, individual grade distributions, and automated burnout detection

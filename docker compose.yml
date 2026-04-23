@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # 📊 Grafana: Professional Dashboard Interface
+  grafana:
+    image: grafana/grafana:10.1.5
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true      # Allows embedding in your Flask app!
+      - GF_SECURITY_ALLOW_EMBEDDING=true
+    volumes:
+      - ./grafana/provisioning:/etc/grafana/provisioning
+
+  # 🗄️ InfluxDB: High-Performance Metrics Storage
+  influxdb:
+    image: influxdb:2.7
+    ports:
+      - "8086:8086"
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_ORG=edu-analytics
+      - DOCKER_INFLUXDB_INIT_BUCKET=academic_metrics
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=super-secret-spark-token
